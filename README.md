@@ -22,13 +22,11 @@ Again, see https://github.com/kristina-hager/HelloToSpatialite for an example of
 
 ## Credits
 
-I used this application as an example to help me set things up:
-https://github.com/geopaparazzi/geopaparazzi
+- I used this application as an example to help me set things up:
+   - https://github.com/geopaparazzi/geopaparazzi
 
-Also thanks to @mj10777 for helping me out in this thread:
-https://github.com/geopaparazzi/libjsqlite-spatialite-android/issues/12
-
-and also thanks to countless StackOverflow postings/answers and online tutorials for helping me understand Android Studio, library modules, JNI and so on.
+- Thanks to @mj10777 for helping me out in this thread:
+   - https://github.com/geopaparazzi/libjsqlite-spatialite-android/issues/12
 
 Some articles I found useful during this work as they explained some concept I needed to understand:
 - [NDK with Android Studio](http://www.shaneenishry.com/blog/2014/08/17/ndk-with-android-studio/)
@@ -36,4 +34,5 @@ Some articles I found useful during this work as they explained some concept I n
 - These two sources helped me get started with creating a standalone library module in Android Studio
    - http://stackoverflow.com/questions/22243269/how-to-share-a-single-library-source-across-multiple-projects
    - https://gist.github.com/daniellevass/2c46cf33e3814e685b47
+
 
