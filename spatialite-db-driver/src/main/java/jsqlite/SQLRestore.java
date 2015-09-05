@@ -19,7 +19,7 @@ public class SQLRestore {
 	this.db = db;
     }
 
-    public void restore() throws Exception {
+    public void restore() throws jsqlite.Exception {
 	String line = null, sql = null;
 	while (true) {
 	    try {
@@ -27,7 +27,7 @@ public class SQLRestore {
 	    } catch (EOFException e) {
 		line = null;
 	    } catch (IOException e) {
-		throw new Exception("I/O error: " + e);
+		throw new jsqlite.Exception("I/O error: " + e);
 	    }
 	    if (line == null) {
 		break;
@@ -43,7 +43,7 @@ public class SQLRestore {
 	    }
 	}
 	if (sql != null) {
-	    throw new Exception("Incomplete SQL: " + sql);
+	    throw new jsqlite.Exception("Incomplete SQL: " + sql);
 	}
     }
 }

@@ -107,14 +107,14 @@ public abstract class Benchmark {
 
 	if (DriverName.length() == 0 || DBUrl.length() == 0) {
 	    System.out.println("JDBC based benchmark program\n\n" +
-			       "JRE usage:\n\njava BenchmarkDriver " +
+			       "JRE usage:\n\njava jsqlite.BenchmarkDriver " +
 			       "-url [url_to_db] \\\n    " +
 			       "[-user [username]] " +
 			       "[-password [password]] " +
 			       "[-driver [driver_class_name]] \\\n    " +
 			       "[-v] [-init] [-tpc N] [-tps N] " +
 			       "[-clients N]\n");
-	    System.out.println("OJEC usage:\n\ncvm BenchmarkDataSource " +
+	    System.out.println("OJEC usage:\n\ncvm jsqlite.BenchmarkDataSource " +
 			       "[-user [username]] " +
 			       "[-password [password]] " +
 			       "[-driver [driver_class_name]] \\\n    " +
@@ -127,7 +127,7 @@ public abstract class Benchmark {
 	    System.out.println("-tps N      scale factor");
 	    System.out.println("-clients N  number of simultaneous clients/threads");
 	    System.out.println();
-	    System.out.println("Default driver class is JDBCDriver");
+	    System.out.println("Default driver class is jsqlite.JDBCDriver");
 	    System.out.println("in this case use an -url parameter of the form");
 	    System.out.println("  jdbc:sqlite:/[path]");
 	    System.exit(1);

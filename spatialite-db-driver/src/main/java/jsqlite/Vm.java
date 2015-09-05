@@ -44,7 +44,7 @@ public class Vm {
      * false, otherwise.
      */
 
-    public native boolean step(Callback cb) throws Exception;
+    public native boolean step(Callback cb) throws jsqlite.Exception;
 
     /**
      * Compile the next SQL statement for the SQLite VM instance.
@@ -52,13 +52,13 @@ public class Vm {
      * on end of statement sequence.
      */
 
-    public native boolean compile() throws Exception;
+    public native boolean compile() throws jsqlite.Exception;
 
     /**
      * Abort the compiled SQLite VM.
      */
 
-    public native void stop() throws Exception;
+    public native void stop() throws jsqlite.Exception;
 
     /**
      * Destructor for object.
