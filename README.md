@@ -1,10 +1,10 @@
 # Spatialite-Database-Driver
 
-This is a standalone Android library that can be used in an Android application.
+I created Spatialite-Database-Driver to enable the usage of [spatialite android](https://www.gaia-gis.it/fossil/libspatialite/wiki?name=splite-android) in Android applications in more recent Android Studio (v1.3) build environments.
 
-See https://github.com/kristina-hager/HelloToSpatialite for an example of using this in a simple spatialite application.
+See [HelloToSpatialite](https://github.com/kristina-hager/HelloToSpatialite) for an example of using this standalone in a simple spatialite application.
 
-The shared objects and source files in this repository are not mine. They were copied from other sources as explained next. My contribution here is figuring out how to package this library up in the relatively new Android Studio environment, and how to use it in a separate application.
+The shared objects and source files in this repository are not mine. They were copied from other sources as explained next. My contribution here is figuring out how to package this library up in the relatively new Android Studio environment and how to use it in a separate application.
 
 ## The original sources
 
