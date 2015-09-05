@@ -1,3 +1,4 @@
+//NOTE: Changed this line from .application to .library
 apply plugin: 'com.android.library'
 
 android {

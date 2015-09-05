@@ -1,3 +1,9 @@
+<!--NOTE: I had to remove usual scoping from this declaration.
+    E.g. package="mycompany.spatialite_database_driver"
+    won't work. Specifically, the scoped namespace prevents
+    java code in other apps that wish to use this module
+    from doing an 'import jsqlite;'
+-->
 <manifest
     package="spatialite_database_driver">
 </manifest>
