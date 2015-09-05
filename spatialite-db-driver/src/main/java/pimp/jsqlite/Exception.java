@@ -1,4 +1,4 @@
-package jsqlite;
+package pimp.jsqlite;
 
 /**
  * Class for SQLite related exceptions.

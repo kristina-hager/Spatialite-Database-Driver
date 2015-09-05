@@ -1,4 +1,4 @@
-package jsqlite;
+package pimp.jsqlite;
 
 import java.io.BufferedReader;
 import java.io.EOFException;
@@ -19,7 +19,7 @@ public class SQLRestore {
 	this.db = db;
     }
 
-    public void restore() throws jsqlite.Exception {
+    public void restore() throws Exception {
 	String line = null, sql = null;
 	while (true) {
 	    try {
@@ -27,7 +27,7 @@ public class SQLRestore {
 	    } catch (EOFException e) {
 		line = null;
 	    } catch (IOException e) {
-		throw new jsqlite.Exception("I/O error: " + e);
+		throw new Exception("I/O error: " + e);
 	    }
 	    if (line == null) {
 		break;
@@ -43,7 +43,7 @@ public class SQLRestore {
 	    }
 	}
 	if (sql != null) {
-	    throw new jsqlite.Exception("Incomplete SQL: " + sql);
+	    throw new Exception("Incomplete SQL: " + sql);
 	}
     }
 }

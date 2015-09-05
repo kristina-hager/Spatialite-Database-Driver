@@ -1,4 +1,4 @@
-package jsqlite;
+package pimp.jsqlite;
 
 /**
  * Callback interface for SQLite's trace function.

@@ -1,4 +1,4 @@
-package jsqlite;
+package pimp.jsqlite;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
  * of sqlite/src/shell.c and can be invoked by:<P>
  *
  * <verb>
- *     java jsqlite.Shell [OPTIONS] database [SHELLCMD]
+ *     java Shell [OPTIONS] database [SHELLCMD]
  * or
  *     java -jar sqlite.jar [OPTIONS] database [SHELLCMD]
  * </verb>
@@ -170,7 +170,7 @@ public class Shell implements Callback {
     }
 
     public void types( String args[] ) {
-        /* Empty body to satisfy jsqlite.Callback interface. */
+        /* Empty body to satisfy Callback interface. */
     }
 
     public boolean newrow( String args[] ) {
@@ -554,7 +554,7 @@ public class Shell implements Callback {
             System.exit(1);
         }
         try {
-            s.db.open(dbname, jsqlite.Constants.SQLITE_OPEN_READWRITE | jsqlite.Constants.SQLITE_OPEN_CREATE);
+            s.db.open(dbname, Constants.SQLITE_OPEN_READWRITE | Constants.SQLITE_OPEN_CREATE);
         } catch (Exception e) {
             System.err.println("Unable to open database: " + e);
             System.exit(1);
@@ -620,11 +620,11 @@ class DBDump implements Callback {
     }
 
     public void columns( String col[] ) {
-        /* Empty body to satisfy jsqlite.Callback interface. */
+        /* Empty body to satisfy Callback interface. */
     }
 
     public void types( String args[] ) {
-        /* Empty body to satisfy jsqlite.Callback interface. */
+        /* Empty body to satisfy Callback interface. */
     }
 
     public boolean newrow( String args[] ) {

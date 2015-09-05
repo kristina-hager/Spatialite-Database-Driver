@@ -1,4 +1,4 @@
-package jsqlite;
+package pimp.jsqlite;
 
 /**
  * Context for execution of SQLite's user defined functions.

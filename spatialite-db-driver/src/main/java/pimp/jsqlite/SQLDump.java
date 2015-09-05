@@ -1,4 +1,4 @@
-package jsqlite;
+package pimp.jsqlite;
 
 import java.io.PrintStream;
 import java.io.PrintWriter;
@@ -31,7 +31,7 @@ public class SQLDump implements Callback {
 	s.db = db;
     }
 
-    public void dump() throws jsqlite.Exception {
+    public void dump() throws Exception {
 	pw.println("BEGIN TRANSACTION;");
 	db.exec("SELECT name, type, sql FROM sqlite_master " +
 		"WHERE type!='meta' AND sql NOT NULL " +
@@ -41,11 +41,11 @@ public class SQLDump implements Callback {
     }
 
     public void columns(String col[]) {
-	/* Empty body to satisfy jsqlite.Callback interface. */
+	/* Empty body to satisfy Callback interface. */
     }
 
     public void types(String args[]) {
-	/* Empty body to satisfy jsqlite.Callback interface. */
+	/* Empty body to satisfy Callback interface. */
     }
 
     public boolean newrow(String args[]) {

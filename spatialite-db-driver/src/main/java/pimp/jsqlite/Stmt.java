@@ -1,4 +1,4 @@
-package jsqlite;
+package pimp.jsqlite;
 
 /**
  * Class to represent compiled SQLite3 statement.
@@ -29,7 +29,7 @@ public class Stmt {
      * has been prepared, false on end of statement sequence.
      */
 
-    public native boolean prepare() throws jsqlite.Exception;
+    public native boolean prepare() throws Exception;
 
     /**
      * Perform one step of compiled SQLite3 statement.
@@ -57,7 +57,7 @@ public class Stmt {
      *         ...
      *       }
      *     }
-     *   } catch (jsqlite.Exception e) {
+     *   } catch (Exception e) {
      *     s.close();
      *   }
      * </PRE>
@@ -66,26 +66,26 @@ public class Stmt {
      * of result set.
      */
 
-    public native boolean step() throws jsqlite.Exception;
+    public native boolean step() throws Exception;
 
     /**
      * Close the compiled SQLite3 statement.
      */
 
-    public native void close() throws jsqlite.Exception;
+    public native void close() throws Exception;
 
     /**
      * Reset the compiled SQLite3 statement without
      * clearing parameter bindings.
      */
 
-    public native void reset() throws jsqlite.Exception;
+    public native void reset() throws Exception;
 
     /**
      * Clear all bound parameters of the compiled SQLite3 statement.
      */
 
-    public native void clear_bindings() throws jsqlite.Exception;
+    public native void clear_bindings() throws Exception;
 
     /**
      * Bind positional integer value to compiled SQLite3 statement.
@@ -93,7 +93,7 @@ public class Stmt {
      * @param value value of parameter
      */
 
-    public native void bind(int pos, int value) throws jsqlite.Exception;
+    public native void bind(int pos, int value) throws Exception;
 
     /**
      * Bind positional long value to compiled SQLite3 statement.
@@ -101,7 +101,7 @@ public class Stmt {
      * @param value value of parameter
      */
 
-    public native void bind(int pos, long value) throws jsqlite.Exception;
+    public native void bind(int pos, long value) throws Exception;
 
     /**
      * Bind positional double value to compiled SQLite3 statement.
@@ -109,7 +109,7 @@ public class Stmt {
      * @param value value of parameter
      */
 
-    public native void bind(int pos, double value) throws jsqlite.Exception;
+    public native void bind(int pos, double value) throws Exception;
 
     /**
      * Bind positional byte array to compiled SQLite3 statement.
@@ -117,7 +117,7 @@ public class Stmt {
      * @param value value of parameter, may be null
      */
 
-    public native void bind(int pos, byte[] value) throws jsqlite.Exception;
+    public native void bind(int pos, byte[] value) throws Exception;
 
     /**
      * Bind positional String to compiled SQLite3 statement.
@@ -125,14 +125,14 @@ public class Stmt {
      * @param value value of parameter, may be null
      */
 
-    public native void bind(int pos, String value) throws jsqlite.Exception;
+    public native void bind(int pos, String value) throws Exception;
 
     /**
      * Bind positional SQL null to compiled SQLite3 statement.
      * @param pos parameter index, 1-based
      */
 
-    public native void bind(int pos) throws jsqlite.Exception;
+    public native void bind(int pos) throws Exception;
 
     /**
      * Bind positional zero'ed blob to compiled SQLite3 statement.
@@ -141,14 +141,14 @@ public class Stmt {
      */
 
     public native void bind_zeroblob(int pos, int length)
-	throws jsqlite.Exception;
+	throws Exception;
 
     /**
      * Return number of parameters in compiled SQLite3 statement.
      * @return int number of parameters
      */
 
-    public native int bind_parameter_count() throws jsqlite.Exception;
+    public native int bind_parameter_count() throws Exception;
 
     /**
      * Return name of parameter in compiled SQLite3 statement.
@@ -156,7 +156,7 @@ public class Stmt {
      * @return String parameter name
      */
 
-    public native String bind_parameter_name(int pos) throws jsqlite.Exception;
+    public native String bind_parameter_name(int pos) throws Exception;
 
     /**
      * Return index of named parameter in compiled SQLite3 statement.
@@ -165,7 +165,7 @@ public class Stmt {
      */
 
     public native int bind_parameter_index(String name)
-	throws jsqlite.Exception;
+	throws Exception;
 
 
     /**
@@ -174,49 +174,49 @@ public class Stmt {
      * @return int column value
      */
 
-    public native int column_int(int col) throws jsqlite.Exception;
+    public native int column_int(int col) throws Exception;
 
     /**
      * Retrieve long column from exec'ed SQLite3 statement.
      * @param col column number, 0-based
      * @return long column value
      */
-    public native long column_long(int col) throws jsqlite.Exception;
+    public native long column_long(int col) throws Exception;
 
     /**
      * Retrieve double column from exec'ed SQLite3 statement.
      * @param col column number, 0-based
      * @return double column value
      */
-    public native double column_double(int col) throws jsqlite.Exception;
+    public native double column_double(int col) throws Exception;
 
     /**
      * Retrieve blob column from exec'ed SQLite3 statement.
      * @param col column number, 0-based
      * @return byte[] column value
      */
-    public native byte[] column_bytes(int col) throws jsqlite.Exception;
+    public native byte[] column_bytes(int col) throws Exception;
 
     /**
      * Retrieve string column from exec'ed SQLite3 statement.
      * @param col column number, 0-based
      * @return String column value
      */
-    public native String column_string(int col) throws jsqlite.Exception;
+    public native String column_string(int col) throws Exception;
 
     /**
      * Retrieve column type from exec'ed SQLite3 statement.
      * @param col column number, 0-based
-     * @return column type code, e.g. jsqlite.Constants.SQLITE_INTEGER
+     * @return column type code, e.g. Constants.SQLITE_INTEGER
      */
-    public native int column_type(int col) throws jsqlite.Exception;
+    public native int column_type(int col) throws Exception;
 
     /**
      * Retrieve number of columns of exec'ed SQLite3 statement.
      * @return int number of columns
      */
 
-    public native int column_count() throws jsqlite.Exception;
+    public native int column_count() throws Exception;
 
     /**
      * Retrieve column data as object from exec'ed SQLite3 statement.
@@ -224,7 +224,7 @@ public class Stmt {
      * @return Object or null
      */
 
-    public Object column(int col) throws jsqlite.Exception {
+    public Object column(int col) throws Exception {
 	switch (column_type(col)) {
 	case Constants.SQLITE_INTEGER:
 	    return new Long(column_long(col));
@@ -244,7 +244,7 @@ public class Stmt {
      * @return String or null
      */
 
-    public native String column_table_name(int col) throws jsqlite.Exception;
+    public native String column_table_name(int col) throws Exception;
 
     /**
      * Return database name of column of SQLite3 statement.
@@ -252,7 +252,7 @@ public class Stmt {
      * @return String or null
      */
 
-    public native String column_database_name(int col) throws jsqlite.Exception;
+    public native String column_database_name(int col) throws Exception;
 
     /**
      * Return declared column type of SQLite3 statement.
@@ -260,7 +260,7 @@ public class Stmt {
      * @return String or null
      */
 
-    public native String column_decltype(int col) throws jsqlite.Exception;
+    public native String column_decltype(int col) throws Exception;
 
     /**
      * Return column name of column of SQLite3 statement.
@@ -268,7 +268,7 @@ public class Stmt {
      * @return String or null
      */
 
-    public native String column_name(int col) throws jsqlite.Exception;
+    public native String column_name(int col) throws Exception;
 
     /**
      * Return origin column name of column of SQLite3 statement.
@@ -276,7 +276,7 @@ public class Stmt {
      * @return String or null
      */
 
-    public native String column_origin_name(int col) throws jsqlite.Exception;
+    public native String column_origin_name(int col) throws Exception;
 
     /**
      * Return statement status information.

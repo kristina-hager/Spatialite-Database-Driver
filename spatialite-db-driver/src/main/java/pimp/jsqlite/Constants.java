@@ -1,6 +1,6 @@
 /* DO NOT EDIT */
 
-package jsqlite;
+package pimp.jsqlite;
 
 /**
  * Container for SQLite constants.

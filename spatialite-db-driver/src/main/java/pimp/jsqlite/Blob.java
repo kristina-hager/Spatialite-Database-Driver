@@ -1,4 +1,4 @@
-package jsqlite;
+package pimp.jsqlite;
 
 import java.io.IOException;
 import java.io.InputStream;
