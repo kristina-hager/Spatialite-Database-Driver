@@ -14,7 +14,7 @@ and the java jsqlite code from [geopaparazzispatialitelibrary/src/jsqlite](https
 
 ## Why a standalone library?
 
-Many Android apps today use libraries and lots of the time libraries are built into those apps instead of being separate components.
+Many Android apps today use libraries and lots of the time libraries are embedded in those apps instead of being separate components.
 
 I wanted to make this library a separate component to make it easier for everyone to download it and use it in their own apps.
 
