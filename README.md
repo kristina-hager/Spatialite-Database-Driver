@@ -18,7 +18,6 @@ Many Android apps today use libraries and lots of the time libraries are built i
 
 I wanted to make this library a separate component to make it easier for everyone to download it and use it in their own apps.
 
-Again, see [HelloToSpatialite](https://github.com/kristina-hager/HelloToSpatialite) for an example of using this in a simple spatialite application.
 
 ## Key points in setting this up
 
