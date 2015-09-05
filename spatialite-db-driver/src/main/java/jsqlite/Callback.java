@@ -1,4 +1,4 @@
-package pimp.jsqlite;
+package jsqlite;
 
 /**
  * Callback interface for SQLite's query results.

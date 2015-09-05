@@ -1,4 +1,4 @@
-package pimp.jsqlite;
+package jsqlite;
 
 /**
  * String encoder/decoder for SQLite.

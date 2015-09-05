@@ -1,4 +1,4 @@
-package pimp.jsqlite;
+package jsqlite;
 
 /**
  * Class to represent compiled SQLite VM.

@@ -1,4 +1,4 @@
-package pimp.jsqlite;
+package jsqlite;
 
 /**
  * Main class wrapping an SQLite database.

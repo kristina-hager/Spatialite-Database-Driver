@@ -7,7 +7,7 @@
  *  thread to parallellize server operations.
  */
 
-package pimp.jsqlite;
+package jsqlite;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

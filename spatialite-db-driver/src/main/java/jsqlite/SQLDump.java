@@ -1,4 +1,4 @@
-package pimp.jsqlite;
+package jsqlite;
 
 import java.io.PrintStream;
 import java.io.PrintWriter;
